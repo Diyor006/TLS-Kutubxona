@@ -1,181 +1,275 @@
-!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="uz">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitob Sotish Ilovasi</title>
+
+    <title>Xisobot</title>
+
     <style>
-        /* Umumiy sahifa uslubi */
+
         body {
+
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+
             margin: 0;
+
             padding: 0;
+
+            background-color: #0d0d0d;
+
+            color: #e0e0e0;
+
+            text-align: center;
+
         }
 
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 32px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+            background-color: #1a1a1a;
+
+            color: #00ccff;
+
+            padding: 1em 0;
+
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        nav ul {
+
+            list-style-type: none;
+
+            padding: 0;
+
             display: flex;
-            flex-wrap: wrap;
+
             justify-content: center;
+
+            margin: 0;
+
         }
 
-        .search-bar {
-            text-align: center;
-            margin-bottom: 30px;
+        nav ul li {
+
+            margin-right: 1em;
+
         }
 
-        .search-bar input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            border: 2px solid #007bff;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+        nav ul li a {
 
-        .book {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 10px;
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: inline-block;
-            width: 220px;
-            vertical-align: top;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+            color: #00ccff;
 
-        .book:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
+            text-decoration: none;
 
-        .book img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .book-title {
-            font-size: 20px;
-            margin: 10px 0;
             font-weight: bold;
+
+            padding: 0.5em;
+
+            transition: background-color 0.3s ease;
+
         }
 
-        .book-price {
-            color: #28a745;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+        nav ul li a:hover {
 
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 15px;
+            background-color: #005f80;
+
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s, transform 0.2s;
+
         }
 
-        button:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
+        main {
+
+            padding: 2em;
+
+        }
+
+        section {
+
+            margin: 2em 0;
+
+            padding: 2em;
+
+            background-color: #1a1a1a;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+            border-radius: 8px;
+
         }
 
         footer {
-            text-align: center;
-            padding: 20px 0;
+
+            background-color: #1a1a1a;
+
+            color: #00ccff;
+
+            padding: 1em 0;
+
+        }
+
+        .form-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-direction: column;
+
+        }
+
+        .form-container input {
+
+            margin: 0.5em 0;
+
+            padding: 0.5em;
+
+            width: 200px;
+
+            border: 1px solid #00ccff;
+
             background-color: #333;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 30px;
+
+            color: #e0e0e0;
+
         }
 
-        .reviews {
-            margin-top: 20px;
-            text-align: left;
+        .form-container button {
+
+            padding: 0.5em 1em;
+
+            background-color: #00ccff;
+
+            color: #000;
+
+            border: none;
+
+            cursor: pointer;
+
         }
 
-        .review {
-            border-top: 1px solid #ddd;
-            padding: 10px 0;
+        .form-container button:hover {
+
+            background-color: #005f80;
+
         }
 
-        @media (max-width: 600px) {
-            .book {
-                width: 100%;
-                margin: 10px 0;
-            }
-
-            .search-bar input[type="text"] {
-                width: 90%;
-            }
-        }
     </style>
+
 </head>
+
 <body>
 
-<header>
-    Kitob Sotish Ilovasi
-</header>
+    <header>
 
-<div class="container">
+        <h1>Xisobot</h1>
 
-    <div class="search-bar">
-        <input type="text" placeholder="Kitobni qidirish..." />
-    </div>
+        <nav>
 
-    <div class="book">
-        <img src="kitob1.jpg" alt="Kitob 1">
-        <div class="book-title">Kitob 1</div>
-        <div class="book-price">100 000 so'm</div>
-        <button>Sotib olish</button>
-        <div class="reviews">
-            <h4>Sharhlar:</h4>
-            <div class="review">"Ajoyib kitob!" - Ali</div>
-            <div class="review">"O'qish juda qiziqarli." - Sanjar</div>
-        </div>
-    </div>
+            <ul>
 
-    <div class="book">
-        <img src="kitob2.jpg" alt="Kitob 2">
-        <div class="book-title">Kitob 2</div>
-        <div class="book-price">120 000 so'm</div>
-        <button>Sotib olish</button>
-        <div class="reviews">
-            <h4>Sharhlar:</h4>
-            <div class="review">"Yana o'qimoqchiman!" - Zukhra</div>
-            <div class="review">"Muhim ma'lumotlar." - Temur</div>
-        </div>
-    </div>
+                <li><a href="#employees">Xodimlar Davomati</a></li>
 
-    <!-- Boshqa kitoblar qo'shing -->
+                <li><a href="#products">Mahsulotlar Ro'yhati</a></li>
 
-</div>
+            </ul>
 
-<footer>
-    &copy; 2024 Kitob Sotish Ilovasi. Barcha huquqlar himoyalangan.
-</footer>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section id="employees">
+
+            <h2>Xodimlar Davomati</h2>
+
+            <div class="form-container">
+
+                <input type="text" id="employee-name" placeholder="Ism">
+
+                <button onclick="addEmployee()">Qo'shish</button>
+
+            </div>
+
+            <ul id="employee-list"></ul>
+
+        </section>
+
+        <section id="products">
+
+            <h2>Mahsulotlar Ro'yhati</h2>
+
+            <div class="form-container">
+
+                <input type="text" id="product-name" placeholder="Mahsulot nomi">
+
+                <button onclick="addProduct()">Qo'shish</button>
+
+            </div>
+
+            <ul id="product-list"></ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2024 Xisobot</p>
+
+    </footer>
+
+    <script>
+
+        function addEmployee() {
+
+            const name = document.getElementById('employee-name').value;
+
+            if (name) {
+
+                const employeeList = document.getElementById('employee-list');
+
+                const listItem = document.createElement('li');
+
+                listItem.textContent = name;
+
+                employeeList.appendChild(listItem);
+
+                document.getElementById('employee-name').value = '';
+
+            }
+
+        }
+
+
+
+        function addProduct() {
+
+            const name = document.getElementById('product-name').value;
+
+            if (name) {
+
+                const productList = document.getElementById('product-list');
+
+                const listItem = document.createElement('li');
+
+                listItem.textContent = name;
+
+                productList.appendChild(listItem);
+
+                document.getElementById('product-name').value = '';
+
+            }
+
+        }
+
+    </script>
 
 </body>
-              </html>
+
+</html>
