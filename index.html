@@ -1,0 +1,181 @@
+!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitob Sotish Ilovasi</title>
+    <style>
+        /* Umumiy sahifa uslubi */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .search-bar {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .book {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+            width: 220px;
+            vertical-align: top;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .book:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .book-title {
+            font-size: 20px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .book-price {
+            color: #28a745;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .reviews {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .review {
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            .book {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .search-bar input[type="text"] {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Kitob Sotish Ilovasi
+</header>
+
+<div class="container">
+
+    <div class="search-bar">
+        <input type="text" placeholder="Kitobni qidirish..." />
+    </div>
+
+    <div class="book">
+        <img src="kitob1.jpg" alt="Kitob 1">
+        <div class="book-title">Kitob 1</div>
+        <div class="book-price">100 000 so'm</div>
+        <button>Sotib olish</button>
+        <div class="reviews">
+            <h4>Sharhlar:</h4>
+            <div class="review">"Ajoyib kitob!" - Ali</div>
+            <div class="review">"O'qish juda qiziqarli." - Sanjar</div>
+        </div>
+    </div>
+
+    <div class="book">
+        <img src="kitob2.jpg" alt="Kitob 2">
+        <div class="book-title">Kitob 2</div>
+        <div class="book-price">120 000 so'm</div>
+        <button>Sotib olish</button>
+        <div class="reviews">
+            <h4>Sharhlar:</h4>
+            <div class="review">"Yana o'qimoqchiman!" - Zukhra</div>
+            <div class="review">"Muhim ma'lumotlar." - Temur</div>
+        </div>
+    </div>
+
+    <!-- Boshqa kitoblar qo'shing -->
+
+</div>
+
+<footer>
+    &copy; 2024 Kitob Sotish Ilovasi. Barcha huquqlar himoyalangan.
+</footer>
+
+</body>
+              </html>
